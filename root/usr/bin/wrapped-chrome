@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIN=/usr/bin/google-chrome-stable
+BIN=/usr/bin/google-chrome-beta
 
 # Cleanup
 if ! pgrep chrome > /dev/null;then

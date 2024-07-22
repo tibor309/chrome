@@ -28,6 +28,4 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: |
-            ghcr.io/tibor309/chrome:latest
-            ghcr.io/tibor309/chrome:stable
+          tags: ghcr.io/tibor309/chrome:beta

@@ -12,23 +12,23 @@ LABEL org.opencontainers.image.licenses=GPL-3.0
 
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
-ENV TITLE="Google Chrome"
+ENV TITLE="Google Chrome Beta"
 
 RUN \
   echo "**** add icon ****" && \
   curl -o \
     /kclient/public/icon.png \
-    https://raw.githubusercontent.com/tibor309/icons/main/icons/chrome/chrome_logo_256x256.png && \
+    https://raw.githubusercontent.com/tibor309/icons/main/icons/chrome/chrome-beta_logo_256x256.png && \
   curl -o \
     /kclient/public/favicon.ico \
-    https://raw.githubusercontent.com/tibor309/icons/main/icons/chrome/chrome_icon_32x32.ico && \
+    https://raw.githubusercontent.com/tibor309/icons/main/icons/chrome/chrome-beta_icon_32x32.ico && \
   echo "**** install packages ****" && \
   curl -o \
-    /tmp/google-chrome-stable_current_amd64.deb \
-    https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+    /tmp/google-chrome-beta_current_amd64.deb \
+    https://dl.google.com/linux/direct/google-chrome-beta_current_amd64.deb && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
-    /tmp/google-chrome-stable_current_amd64.deb && \
+    /tmp/google-chrome-beta_current_amd64.deb && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \

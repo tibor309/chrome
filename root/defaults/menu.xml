@@ -6,7 +6,7 @@
             <command>/usr/bin/xterm</command>
             </action>
         </item>
-        <item label="Google Chrome" icon="/usr/share/icons/hicolor/48x48/apps/google-chrome.png">
+        <item label="Google Chrome Beta" icon="/usr/share/icons/hicolor/48x48/apps/google-chrome-beta.png">
             <action name="Execute">
             <command>/usr/bin/wrapped-chrome</command>
             </action>
