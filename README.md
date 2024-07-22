@@ -1,8 +1,8 @@
 # 🪩 Google Chrome Stable
 This is the [stable version][stable] of the browser, updated every month.
 
-## Stable
-To use this edition, change the docker tag to `latest` or `stable`. For setup options check out the [main page][main].
+## Setup
+To use this edition, change the docker image tag to `latest` or `stable`. For setup options check out the [main page][main].
 
 
 [stable]: https://www.google.com/chrome/
