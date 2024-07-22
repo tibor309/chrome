@@ -1,5 +1,5 @@
 # 🪩 Google Chrome Browser
-A web accessible [google chrome][chrome] browser, using [kasmvnc][kasm]. I don't know who would you use chrome, but its here for those. 
+A web accessible [google chrome][chrome] browser, using [kasmvnc][kasm]. I don't know why would you use chrome, but its here.
 **Note: This image is only compatibile with the amd64 archiecture!**
 
 ## Setup
