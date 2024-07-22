@@ -1,5 +1,5 @@
 # 🪩 Google Chrome Stable
-This is the [stable version][stable] of the browser, updated every month.
+This is the [stable version][stable] of the browser, updated every week.
 
 ## Stable
 To use this edition, change the docker tag to `latest` or `stable`. For setup options check out the [main page][main].
