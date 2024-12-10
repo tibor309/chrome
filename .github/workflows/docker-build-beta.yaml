@@ -4,8 +4,25 @@ on:
     - cron: "20 0 * * 0"
 
 jobs:
+  get-version-beta:
+    runs-on: ubuntu-latest
+    outputs:
+      PKG_VER: ${{ steps.getver.outputs.PKG_VER }}
+    steps:
+      - name: Download latest DEB package
+        run: |
+          curl -vSLo /google-chrome-beta_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-beta_current_amd64.deb
+
+      - name: Get package version
+        id: getver
+        run: |
+          PKG_VER=$(dpkg-deb --info /google-chrome-beta_current_amd64.deb | grep Version | awk '{print $2}')
+          echo "PKG_VER=${PKG_VER}" >> $GITHUB_OUTPUT
+          echo "The package version is $PKG_VER"
+
   rebuild-beta:
     runs-on: ubuntu-latest
+    needs: get-version-beta
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -31,4 +48,6 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/tibor309/chrome:beta
+          tags: |
+            ghcr.io/tibor309/chrome:beta
+            ghcr.io/tibor309/chrome:${{ needs.get-version-beta.outputs.PKG_VER }}
