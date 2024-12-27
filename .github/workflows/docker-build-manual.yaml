@@ -10,12 +10,12 @@ jobs:
     steps:
       - name: Download latest DEB package
         run: |
-          curl -vSLo /google-chrome-beta_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-beta_current_amd64.deb
+          curl -vSLo google-chrome-beta_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-beta_current_amd64.deb
 
       - name: Get package version
         id: getver
         run: |
-          PKG_VER=$(dpkg-deb --info /google-chrome-beta_current_amd64.deb | grep Version | awk '{print $2}')
+          PKG_VER=$(dpkg-deb --info google-chrome-beta_current_amd64.deb | grep Version | awk '{print $2}')
           echo "PKG_VER=${PKG_VER}" >> $GITHUB_OUTPUT
           echo "The package version is $PKG_VER"
 
