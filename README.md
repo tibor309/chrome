@@ -1,9 +1,11 @@
-# 🪩 Google Chrome Browser
+# 🔮 Google Chrome Browser
 A web accessible [google chrome][chrome] browser, using [kasmvnc][kasm]. I don't know why would you use chrome, but its here.
-**Note: This image is only compatibile with the amd64 archiecture!**
+
+> [!WARNING]
+> This repo and package has been deprecated, due to lack of interest. If you need an updated version, you'll need to rebuild the image yourself!
 
 ## Setup
-To set up the container, you can either use docker-compose or the docker cli. You can also use options and additional settings/mods from linuxserver.io. For updating the container, simply recreate the container. The [beta][beta_build] version is also availlable!
+To set up the container, you can either use docker-compose or the docker cli. You can also use options and additional settings/mods from linuxserver.io. For updating the container, simply re-pull the image, and deploy it. The [beta][beta_build] version of the browser is also availlable!
 
 ### [docker-compose][dcompose] (recommended)
 ```yaml
